@@ -186,7 +186,7 @@ class ProcessElement(crossbar, DAC, ADC):
 		self.calculate_xbar_area()
 		self.calculate_DAC_area()
 		if self.PE_group_DAC_num == 0:
-			self.PE_group_DAC_num = min(math.ceil(math.sqrt(self.xbar_area)/subarray_num * self.PE_multiplex_xbar_num[0] / math.sqrt(self.DAC_area)), self.subarray_size)*self.subarray_num
+			self.PE_group_DAC_num = min(math.ceil(math.sqrt(self.xbar_area)/self.subarray_num * self.PE_multiplex_xbar_num[0] / math.sqrt(self.DAC_area)), self.subarray_size)*self.subarray_num
 		else:
 			assert self.PE_group_DAC_num > 0, "DAC number in one group < 0"
 		self.PE_DAC_num = self.group_num * self.PE_group_DAC_num

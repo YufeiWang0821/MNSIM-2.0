@@ -26,7 +26,7 @@ def main():
     home_path = os.getcwd()
     # print(home_path)
     SimConfig_path = os.path.join(home_path, "SimConfig.ini")
-    weights_file_path = os.path.join(home_path, "cifar10_vgg8_params.pth")
+    weights_file_path = os.path.join(home_path, "MNSIM/Weights/cifar10_vgg8_params.pth")
     # print(SimConfig_path)
     parser = argparse.ArgumentParser(description='MNSIM example')
     parser.add_argument("-AutoDelete", "--file_auto_delete", default=True,
